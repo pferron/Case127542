@@ -1,0 +1,21 @@
+[[source]]
+url = "https://artifactory.cloud.capitalone.com/artifactory/api/pypi/pypi-internalfacing/simple"
+verify_ssl = true
+name = "pypi"
+
+[pipenv]
+allow_prereleases = false
+
+[packages]
+marshmallow = "*"
+Werkzeug= "==2.3.8"
+marshmallow-sqlalchemy = "==0.23.1"
+WTForms = "==2.2.1"
+Flask-WTF = "*"
+Flask-OpenID = "*"
+Flask-AppBuilder = "*"
+sqlalchemy = "*"
+c1-occulib = {editable = true, extras = ["dags"], path = "."}
+
+[dev-packages]
+c1-occulib = {editable = true, extras = ["dev"], path = "."}
